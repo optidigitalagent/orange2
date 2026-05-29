@@ -10,6 +10,40 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
+<style>
+/* ── Mobile header fix: brand text overflow ── */
+@media (max-width: 767px) {
+  .hdr-in {
+    gap: 6px;
+  }
+  .brand {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+  .brand > span:last-child {
+    font-size: clamp(12px, 3.5vw, 16px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+  .brand small {
+    display: none; /* приховуємо "studio · Запоріжжя" — залишаємо тільки назву */
+  }
+  .hdr-cta .hdr-phone {
+    display: none; /* номер телефону прибрано з хедера на мобайлі */
+  }
+  .hdr-cta .btn {
+    padding: 8px 14px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .brand .mark img {
+    width: 36px;
+    height: 36px;
+  }
+}
+</style>
 </head>
 <body>
 
